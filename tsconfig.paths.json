@@ -1,0 +1,10 @@
+{
+  "compilerOptions": {
+    "baseUrl": ".",
+    "paths": {
+      "types": [
+        "../advertisement-service-back/types"
+      ]
+    }
+  }
+}

@@ -1,0 +1,14 @@
+body {
+  margin: 0;
+  border: 0;
+  box-sizing: border-box;
+  font-family: 'Montserrat', sans-serif;
+}
+
+*, *::before, *::after {
+  box-sizing: inherit;
+}
+
+a, button {
+  font-family: 'Montserrat', sans-serif;;
+}
