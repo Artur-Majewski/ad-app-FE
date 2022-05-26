@@ -1,11 +1,9 @@
-function App() {
+import { Header } from "./components/organisms/Header/Header";
+
+export const App = () => {
 	return (
 		<div>
-			<header>
-        Header
-			</header>
+			<Header />
 		</div>
 	);
-}
-
-export default App;
+};
