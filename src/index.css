@@ -12,3 +12,7 @@
 a, button {
   font-family: 'Montserrat', sans-serif;;
 }
+
+.leaflet-container {
+  height: calc(100vh - 75px);
+}
