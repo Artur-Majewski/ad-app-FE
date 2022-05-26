@@ -1,7 +1,7 @@
 .header {
   display: grid;
   grid-template-columns: auto 1fr auto;
-  justify-items: center;
+  // justify-items: center;
   align-items: center;
   height: 75px;
   color: white;
@@ -10,114 +10,5 @@
 
 .title {
   margin-left: 2vw;
-}
-
-.searchForm {
-  position: relative;
-  overflow: hidden;
-  background-color: transparent;
-  width: 50%;
-  display: flex;
-  justify-content: space-around;
-}
-
-.searchInput {
-  position: relative;
-  outline: none;
-  width: 100%;
-  height: 2rem;
-  padding: 0 5rem 0 1rem;
-  border-radius: 5px;
-  font-size: 1.1rem;
-  color: white;
-  
-
-  &::placeholder {
-    color: rgba(#FFF, 0.8);
-  }
-
-  &::-webkit-search-cancel-button {
-    transition: opacity 0.5s;
-  }
-
-  &:focus {
-    background-color: rgba(#000, 0.4)
-  }
-
-  &:placeholder-shown {
-    background-color: rgba(#FFF, 0.2);
-  }
-
-  &:not(:placeholder-shown) {
-    background-color: rgba(#000, 0.4);
-
-    &+button {
-      transform: translateX(-100%);
-    }
-  }
-}
-
-.searchBtn {
-  position: absolute;
-  top: 0;
-  bottom: 0;
-  right: -4rem;
-  padding: 0;
-  width: 4rem;
-  font-weight: bold;
-  background: rgb(0, 170, 250);
-  border-radius: 0 5px 5px 0;
-  transition: transform 0.5s;
-}
-
-.addBtn {
-  position: relative;
-  margin-right: 2vw;
-  width: 150px;
-  height: 2.2rem;
-  cursor: pointer;
-  border: none;
-  border-radius: 10px;
-  background-color: #7f5a83;
-  background-image: linear-gradient(315deg, #2a82e7 0%, #082c46 74%);
-  background-size: 150% 100%;
-  background-position: left;
-  background-repeat: no-repeat;
-  transition: 500ms;
-  outline-style: none;
-
-  &::before {
-    content: 'Add new ad';
-    color: rgba(255, 255, 255, 0.5);
-    font-size: 1rem;
-    position: absolute;
-    top: 4px;
-    left: 4px;
-    right: 4px;
-    bottom: 4px;
-    border-radius: 10px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    background-color: #1b2845;
-    background-image: linear-gradient(315deg, #1b2845 0%, #274060 74%);
-    transition: 500ms;
-  }
-
-  &:hover {
-    background-position: right;
-  }
-
-  &:hover:before,
-  & {
-    color: rgba(255, 255, 255, 0.8);
-  }
-
-  &:focus {
-    background-position: right;
-
-    &:before {
-      color: rgba(255, 255, 255, 0.8);
-    }
-  }
+  grid-column-start: 1;
 }
