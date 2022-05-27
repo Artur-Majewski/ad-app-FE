@@ -4,18 +4,21 @@ import styles from './Map.module.scss';
 import 'leaflet/dist/leaflet.css';
 import { useEffect, useState } from 'react';
 import { SimpleAdEntity } from 'types';
+import { useSelector } from 'react-redux';
+import { RootState } from 'src/redux-toolkit/store';
+import { SingleAd } from '../SingleAd/SingleAd';
 
 export const Map = () => {
 	const [ads, setAds] = useState<SimpleAdEntity[]>([]);
+  const { name } = useSelector((store: RootState) => store.search);
 
 	useEffect(() => {
 		(async () => {
-			const res = await fetch('http://localhost:3001/ad/search');
-			// const res = await fetch(`http://localhost:3001/ad/search/${}`);
+			const res = await fetch(`http://localhost:3001/ad/search/${name}`);
 			const adsData = await res.json();
 			setAds(adsData);
 		})();
-	}, []);
+	}, [name]);
 
 	return (
 		<section className={styles.map}>
@@ -26,7 +29,9 @@ export const Map = () => {
 				/>
 				{ads.map((ad) => (
 					<Marker key={ad.id} position={[ad.latitude, ad.longitude]}>
-						<Popup>{ad.id}</Popup>
+						<Popup>
+							<SingleAd id={ad.id}/>	
+						</Popup>
 					</Marker>
 				))}
 			</MapContainer>
