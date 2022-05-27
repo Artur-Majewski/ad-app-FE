@@ -1,0 +1,47 @@
+.formFild {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+}
+.input {
+  width: 90%;
+  height: 35px;
+  margin: 20px 0 15px;
+  border-radius: 10px;
+  padding-left: 10px;
+  border: none;
+  font-size: 1rem;
+  color: white;
+  background-color: rgba($color: #000000, $alpha: 0.5);
+
+
+
+  &:focus+label,
+  &:not(:placeholder-shown)+label {
+    transform: translate(-5px, -32px) scale(0.9);
+  }
+
+  &::placeholder {
+    color: transparent;
+  }
+}
+
+.label {
+  position: absolute;
+  top: 26px;
+  left: 7%;
+  font-size: 1.3rem;
+  transform-origin: 0.0;
+  transition: transform 0.3s;
+  color: rgb(230, 230, 230);
+}
+
+.errorInfo {
+  position: absolute;
+  top: 0;
+  font-size: 0.9rem;
+  font-weight: 700;
+  color: rgb(255, 100, 0);
+}
