@@ -8,7 +8,7 @@ export const Header = () => {
 		<header className={styles.header}>
 			<h1 className={styles.title}>TBHA</h1>
 			<SearchForm />
-			<Button name='Add new ad' />
+			<Button name='Add new ad' to='/add-form' size='big'/>
 		</header>
 	);
 };
