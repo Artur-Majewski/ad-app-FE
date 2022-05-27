@@ -1,51 +1,34 @@
 .addBtn {
-  position: relative;
-  margin-right: 2vw;
-  width: 150px;
-  height: 2.2rem;
-  cursor: pointer;
-  border: none;
-  border-radius: 10px;
-  background-color: #7f5a83;
-  background-image: linear-gradient(315deg, #2a82e7 0%, #082c46 74%);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 35px;
+  min-width: 150px;
+  padding: 0 1rem;
+  border-radius: 10rem;
+  border: solid 7.5px transparent;
+  font-size: 1.2rem;
+  text-decoration: none;
+  box-sizing: border-box;
+  color: white;
+  box-shadow: 0px 40px 0px #1b2845 inset;
+  background-image: linear-gradient(45deg, #082c46 0%, #2a82e7 74%);
+  background-origin: border-box;
   background-size: 150% 100%;
   background-position: left;
   background-repeat: no-repeat;
-  transition: 500ms;
   outline-style: none;
-
-  &::before {
-    content: 'Add new ad';
-    color: rgba(255, 255, 255, 0.5);
-    font-size: 1rem;
-    position: absolute;
-    top: 4px;
-    left: 4px;
-    right: 4px;
-    bottom: 4px;
-    border-radius: 10px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    background-color: #1b2845;
-    background-image: linear-gradient(315deg, #1b2845 0%, #274060 74%);
-    transition: 500ms;
-  }
+  transition: 300ms;
 
   &:hover {
+    color: black;
     background-position: right;
-  }
-
-  &:hover:before,
-  & {
-    color: rgba(255, 255, 255, 0.8);
+    box-shadow: 0px 40px 0px transparent inset;
   }
 
   &:focus {
+    color: black;
     background-position: right;
-
-    &:before {
-      color: rgba(255, 255, 255, 0.8);
-    }
+    box-shadow: 0px 40px 0px transparent inset;
   }
 }
