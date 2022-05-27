@@ -1,0 +1,50 @@
+.adWrapper {
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: auto auto auto 1fr auto;
+  // display: flex;
+  // flex-direction: column;
+  width: calc(100% - 40px);
+  min-height: 300px;
+  // background-color: orange;
+}
+
+.adTitle {
+  text-align: center;
+  font-size: 1.5rem;
+  grid-row: 1;
+}
+
+.adPrice {
+  font-weight: 700;
+  grid-row: 2;
+  margin: 5px 0 0!important;
+  font-size: 1rem;
+}
+
+.adAddress{
+  margin: 5px 0 0!important;
+  font-size: 1rem;
+}
+.adLink {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 30px;
+  padding: 0 20px;
+
+  font-size: 1rem;
+  grid-row: -1;
+  text-decoration: none;
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: white;
+}
+
+.adDescription{
+  margin: 5px 0 0 !important;
+  width: 100%;
+
+  padding: 5px;
+  grid-row: 4;
+}

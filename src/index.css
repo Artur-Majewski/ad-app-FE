@@ -17,3 +17,10 @@ a, button {
 .leaflet-container {
   height: calc(100vh - 75px);
 }
+
+
+.leaflet-popup, .leaflet-popup-content {
+  width: 300px !important;
+  margin: 20px;
+}
+
