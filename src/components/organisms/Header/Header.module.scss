@@ -1,14 +1,9 @@
 .header {
   display: grid;
   grid-template-columns: auto 1fr auto;
-  // justify-items: center;
   align-items: center;
   height: 75px;
   color: white;
   background-color: rgb(38, 50, 56);
 }
 
-.title {
-  margin-left: 2vw;
-  grid-column-start: 1;
-}

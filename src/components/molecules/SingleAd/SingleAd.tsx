@@ -15,7 +15,7 @@ export const SingleAd = (props: Props) => {
 			const data = await res.json();
 			setAd(data);
 		})();
-	}, []);
+	}, [props.id]);
 
 	if (ad === null) {
 		return <span>Loading...</span>;

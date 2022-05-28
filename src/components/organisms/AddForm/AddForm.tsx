@@ -6,19 +6,23 @@ import { Textarea } from '../../atoms/Textarea/Textarea';
 import styles from './AddForm.module.scss';
 import { Title } from '../../atoms/Title/Title';
 import { getGeoCode } from '../../../utils/goecoding';
+import { useState } from 'react';
 
 export const AddForm = () => {
+	const [isLoading, setIsLoading] = useState(false);
+	const [isAdded, setIsAdded] = useState(false);
 	const {
 		register,
 		handleSubmit,
 		formState: { errors },
+		getValues,
 	} = useForm<AdFormEntity>();
 
 	const onSubmit = handleSubmit((data) => {
 		(async () => {
+		try {
+			setIsLoading(true);
 			const { latitude, longitude } = await getGeoCode(data.address);
-			console.log(latitude, longitude);
-
 			const res = await fetch('http://localhost:3001/ad', {
 				method: 'POST',
 				headers: {
@@ -30,9 +34,15 @@ export const AddForm = () => {
 					longitude,
 				}),
 			});
-			const resData = await res.json()
-
+			const resData = await res.json();
+			setIsAdded(true)
 			console.log(resData);
+		} catch (error) {
+			setIsAdded(false)
+			console.log(error)
+		} finally {
+			setIsLoading(false)
+		}
 		})();
 	});
 
@@ -72,6 +82,16 @@ export const AddForm = () => {
 	const addressValidate = {
 		required: 'Address is required',
 	};
+
+	if (isLoading) {
+		return <h1>...Loading</h1>;
+	}
+
+	if (isAdded) {
+		return <h1>Your "{getValues(["name"])}" ad has been correctly added</h1>;
+	}
+
+
 
 	return (
 		<section className={styles.formWrapper}>
