@@ -36,10 +36,10 @@ export const AddForm = () => {
 			});
 			const resData = await res.json();
 			setIsAdded(true)
-			console.log(resData);
+
 		} catch (error) {
 			setIsAdded(false)
-			console.log(error)
+
 		} finally {
 			setIsLoading(false)
 		}

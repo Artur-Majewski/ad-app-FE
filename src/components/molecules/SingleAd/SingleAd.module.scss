@@ -2,11 +2,9 @@
   display: grid;
   grid-template-columns: 1fr;
   grid-template-rows: auto auto auto 1fr auto;
-  // display: flex;
-  // flex-direction: column;
   width: calc(100% - 40px);
-  min-height: 300px;
-  // background-color: orange;
+  max-height: 300px;
+
 }
 
 .adTitle {
@@ -44,7 +42,6 @@
 .adDescription{
   margin: 5px 0 0 !important;
   width: 100%;
-
   padding: 5px;
   grid-row: 4;
 }

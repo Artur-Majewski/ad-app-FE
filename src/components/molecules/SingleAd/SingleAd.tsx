@@ -26,7 +26,7 @@ export const SingleAd = (props: Props) => {
 			<h2 className={styles.adTitle}>{ad.name}</h2>
 			{ad.price ? <p className={styles.adPrice}>Price: {ad.price} PLN</p> : null}
 			<p className={styles.adAddress}>Address: <br/>{ad.address}</p>
-      <p className={styles.adDescription}>Description: <br/>{ad.description}</p>
+      {/* <p className={styles.adDescription}>Description: <br/>{ad.description}</p> */}
 			<a href={ad.url} className={styles.adLink} target='_blank' rel='noreferrer'>
 				Open
 			</a>
