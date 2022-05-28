@@ -9,15 +9,12 @@ interface SerachInterface {
 
 export const SearchForm = () => {
 	const dispatch = useDispatch();
-	const { register, handleSubmit } = useForm<SerachInterface>();
+	const { register, handleSubmit } = useForm<SerachInterface>({mode: 'onChange'});
 
 
 	const onSubmit = handleSubmit((data) => {
 		const searchValue = data.searchTerm;
-		if (searchValue) {
-			// console.log(searchValue)
 			dispatch(setSearchName(searchValue));
-		}
 	});
 
 	return (

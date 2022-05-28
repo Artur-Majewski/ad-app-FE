@@ -1,7 +1,7 @@
 import { createSlice } from '@reduxjs/toolkit';
 
 interface SearchState {
-	name: string;
+	name: string | undefined;
 }
 
 const initialState: SearchState = {
@@ -9,7 +9,7 @@ const initialState: SearchState = {
 };
 
 interface SetSearchName {
-	payload: string;
+	payload: string | undefined;
 }
 
 export const searchSlice = createSlice({
@@ -18,6 +18,7 @@ export const searchSlice = createSlice({
 	reducers: {
 		setSearchName: (state, action: SetSearchName) => {
 			state.name = action.payload;
+		console.log(state.name)
 		},
 	},
 });

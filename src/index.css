@@ -25,3 +25,6 @@ a, button {
   margin: 20px;
 }
 
+.leaflet-control-zoom {
+  right: 0 !important;
+}
